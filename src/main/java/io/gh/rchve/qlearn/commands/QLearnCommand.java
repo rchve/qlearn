@@ -4,7 +4,10 @@ import io.quarkus.picocli.runtime.annotations.TopCommand;
 import picocli.CommandLine;
 
 @TopCommand
-@CommandLine.Command(mixinStandardHelpOptions = true, version = "1.0.0")
+@CommandLine.Command(
+    mixinStandardHelpOptions = true,
+    version = "1.0.0",
+    subcommands = {WatchCommand.class})
 public class QLearnCommand implements Runnable {
   @Override
   public void run() {}
